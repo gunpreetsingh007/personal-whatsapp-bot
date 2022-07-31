@@ -8,7 +8,7 @@ module.exports = {
     example: "%prefix%command",
 	noLimit: true,
 	start: async (killua, m, { command, prefix, quoted, mime }) => {
-        const percentage = Math.floor(Math.random() * 100)
+        let percentage = Math.floor(Math.random() * 100)
         let sentence
         if (percentage < 25) {
             sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\t\tThere's still time to reconsider your choices`
