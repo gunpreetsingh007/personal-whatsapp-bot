@@ -311,6 +311,7 @@ module.exports = async (killua, m, commands, chatUpdate) => {
 				return m.reply(`Your limit has run out, please send ${prefix}limit to check the limit`);
 				user.limitAdd(m.sender, isPremium, isOwner, _user);
 			}
+        if(isCmd){
 			cmd.start(killua, m, {
                 name: 'killua Zoldyck',
                 metadata,
@@ -331,6 +332,7 @@ module.exports = async (killua, m, commands, chatUpdate) => {
                     return query.replace(/^\w/, c => c.toUpperCase())
                 }
             })
+          }
 		} catch (e) {
             e = String(e)
             if (!e.includes("cmd.start"))
