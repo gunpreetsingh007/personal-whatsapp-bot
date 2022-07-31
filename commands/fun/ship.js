@@ -10,6 +10,13 @@ module.exports = {
 	start: async (killua, m, { command, prefix, quoted, mime }) => {
         let percentage = Math.floor(Math.random() * 100)
         let sentence
+        if(m.mentions.length < 2){
+            m.reply("2 people are required to ship")
+            return
+        }
+        if( (m.mentions[0].split('@')[0] == "917889397662" && m.mentions[1].split('@')[0] == "917889687914" ) || (m.mentions[0].split('@')[0] == "917889687914" && m.mentions[1].split('@')[0] == "917889397662")  ){
+            percentage = getRndInteger(91,100)
+        }
         if (percentage < 25) {
             sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\t\tThere's still time to reconsider your choices`
         } else if (percentage < 50) {
@@ -22,13 +29,6 @@ module.exports = {
             sentence = `\t\t\t\t\t*ShipCent : ${percentage}%* \n\tYou two are fated to be together 💙`
         }
 
-        if(m.mentions.length < 2){
-            m.reply("2 people are required to ship")
-            return
-        }
-        if( (m.mentions[0].split('@')[0] == "917889397662" && m.mentions[1].split('@')[0] == "917889687914" ) || (m.mentions[0].split('@')[0] == "917889687914" && m.mentions[1].split('@')[0] == "917889397662")  ){
-            percentage = getRndInteger(91,100)
-        }
         const user1 = m.mentions[0]
         const user2 = m.mentions[1]
         let shipFile = fs.readFileSync("database/ship.json")
