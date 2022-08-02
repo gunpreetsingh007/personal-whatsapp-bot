@@ -17,15 +17,13 @@ module.exports = {
                 typeExist = true
             }
         }
-        await axios
-            .get(`https://v2.jokeapi.dev/joke/${typeExist ? args[0] : "Any"}`)
-            .then((response) => {
-                // console.log(response);
-                const text = `🎀 *Category:* ${response.data.category}\n📛 *Joke:* ${response.data.setup}\n🎗️ *Delivery:* ${response.data.delivery}`
-                m.reply(text)
-            })
-            .catch((err) => {
-                m.reply(`✖  An error occurred.`)
-            })
+        try{
+            let response =  await axios.get(`https://v2.jokeapi.dev/joke/${typeExist ? args[0] : "Any"}`)
+            const text = `🎀 *Category:* ${response.data.category}\n📛 *Joke:* ${response.data.setup}\n🎗️ *Delivery:* ${response.data.delivery}`
+            m.reply(text)
+        }
+        catch(err) {
+                m.reply(`✖  An error occurred. ${err}`)
+        }
     }
 }
