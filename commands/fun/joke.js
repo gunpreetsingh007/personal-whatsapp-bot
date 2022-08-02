@@ -1,16 +1,24 @@
 
 const axios = require('axios')
 
+const category = ["Miscellaneous", "Dark", "Pun", "Spooky", "Christmas"]
+
 module.exports = {
     name: "joke",
     alias: ["joke"],
     desc: "Send a random joke for you.",
     type: "fun",
-    example: "%prefix%command",
+    example: "%prefix%command (category/optional['Miscellaneous', 'Dark', 'Pun, 'Spooky', 'Christmas'])",
 	noLimit: true,
-	start: async (killua, m, { command, prefix, quoted, mime }) => {
+	start: async (killua, m, { command, prefix, quoted, mime, args }) => {
+        let typeExist= false
+        if(args[0]){
+            if(category.includes(args[0])){
+                typeExist = true
+            }
+        }
         await axios
-            .get(`https://v2.jokeapi.dev/joke/Any`)
+            .get(`https://v2.jokeapi.dev/joke/${typeExist ? args[0] : "Any"}`)
             .then((response) => {
                 // console.log(response);
                 const text = `🎀 *Category:* ${response.data.category}\n📛 *Joke:* ${response.data.setup}\n🎗️ *Delivery:* ${response.data.delivery}`
