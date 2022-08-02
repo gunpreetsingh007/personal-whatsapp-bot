@@ -8,6 +8,7 @@ module.exports = {
     use: "<reply>",
     desc: "Convert Sticker to Image",
     type: "convert",
+    noLimit: true,
     example: `%prefix%command --sticker reply`,
     start: async(killua, m, { command, prefix, quoted, mime }) => {
         if (!quoted) return  m.reply(`Reply to Supported media With Caption ${prefix + command}`)
