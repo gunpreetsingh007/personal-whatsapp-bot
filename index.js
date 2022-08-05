@@ -94,6 +94,10 @@ const connect = async () => {
         if (m.key.id.startsWith("BAE5") && m.key.id.length == 16) return
         
         if (config.options.autoRead) await killua.sendReadReceipt(m.key.remoteJid, m.key.participant, [m.key.id])
+        // if(m.sender != "917780903638@s.whatsapp.net"){
+        //     m.reply("Bot is under maintenance")
+        //     return
+        // }
         require("./killua")(killua, m, Commands, chatUpdate)
     })
 
