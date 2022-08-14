@@ -5,6 +5,7 @@ const wordgameJSON = JSON.parse(fs.readFileSync("database/wordgame.json"))
 let allWords = fs.readFileSync("database/all_words.txt")
 allWords = allWords.toString().split("\r\n").map(item => item.toLowerCase())
 const commands = ["start", "join", "leave", "forcestart", "stop"]
+console.log(allWords)
 
 
 global.wordgameIntervalIDMaps
