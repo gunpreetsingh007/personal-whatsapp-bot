@@ -93,7 +93,7 @@ module.exports = {
                 switch(args[0]) {
                     case "start":
                       if(!wordgameJSON[m.from]){
-                         let obj =  {"isActive": false,"wordLength": 3, "count": 0, "time": 60 , "startingWord": randomCharacter(), "users": ["19022005669@s.whatsapp.net"]}
+                         let obj =  {"isActive": false,"wordLength": 3, "count": 0, "time": 60 , "startingWord": randomCharacter(), "users": []}
                          wordgameJSON[m.from] = obj
                          fs.writeFileSync("database/wordgame.json", JSON.stringify(wordgameJSON, null, 4))
                          m.reply("Wordgame session has started. Reply with #wordgame join to join the game")
