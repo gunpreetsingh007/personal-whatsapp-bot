@@ -33,9 +33,11 @@ global.tebaklagu = db.game.tebaklagu = {}
 global.tekateki = db.game.tekateki = {}
 global.tebaklirik = db.game.tebaklirik = {}
 global.tebaktebakan = db.game.tebaktebakan = {}
+global.wordgameIntervalIDMaps = {}
 
 module.exports = async (killua, m, commands, chatUpdate) => {
     try {
+        const wordgameJSON = JSON.parse(fs.readFileSync("./database/wordgame.json"))
         let { type, isGroup, sender, from } = m
         let body = (type == "buttonsResponseMessage") ? m.message[type].selectedButtonId : (type == "listResponseMessage") ? m.message[type].singleSelectReply.selectedRowId : (type == "templateButtonReplyMessage") ? m.message[type].selectedId : m.text 
         let metadata = isGroup ? await killua.groupMetadata(from) : {}
@@ -314,6 +316,30 @@ module.exports = async (killua, m, commands, chatUpdate) => {
 			}
         if(isCmd){
 			cmd.start(killua, m, {
+                name: 'killua Zoldyck',
+                metadata,
+                pushName: pushname,
+                isGroup,
+                participants,
+                body,
+                args,
+                ar,
+                text,
+                quoted,
+                mime,
+                prefix,
+                command: cmd.name,
+                commands,
+                Function: Func,
+                toUpper: function toUpper(query) {
+                    return query.replace(/^\w/, c => c.toUpperCase())
+                }
+            })
+          }
+          else if(wordgameJSON[m.from] && wordgameJSON[m.from].isActive){
+    
+            let cmd = commands.get("wordgame") || Array.from(commands.values()).find((v) => v.alias.find((x) => x.toLowerCase() == "wordgame")) || ""
+            cmd.start(killua, m, {
                 name: 'killua Zoldyck',
                 metadata,
                 pushName: pushname,
