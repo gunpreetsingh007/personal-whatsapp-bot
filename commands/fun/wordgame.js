@@ -59,6 +59,7 @@ function checkTimeExpiry(killua, m){
     mentionPerson.push(obj.users[0])
     obj.users.shift()
     if(obj.users.length == 1){
+        usedWords = []
         text += `\n @${obj.users[0].split("@")[0]} Congratulations! You Won!`
         mentionPerson.push(obj.users[0])
         clearInterval(wordgameIntervalIDMaps[m.from])
@@ -159,6 +160,7 @@ module.exports = {
                       break;
                     case "stop":
                         if(wordgameJSON[m.from]){
+                            usedWords = []
                             clearInterval(wordgameIntervalIDMaps[m.from])
                             delete wordgameJSON[m.from]
                             fs.writeFileSync("database/wordgame.json", JSON.stringify(wordgameJSON, null, 4))
