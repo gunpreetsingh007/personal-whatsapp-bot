@@ -142,109 +142,109 @@ module.exports = async (killua, m, commands, chatUpdate) => {
         }
         
         // ENTERTAINMENT
-        try {
-            if (asahotak.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = asahotak[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'asahotak', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete asahotak[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = caklontong[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'caklontong', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete caklontong[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (family100.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = family100[m.sender.split('@')[0]]
-                result = Array.from(jawaban).find((v) => v === budy)
-                if (budy.toLowerCase() == result) {
-                    await killua.sendMessage(m.from, { text:`Benar Salah Satu Jawabanya Adalah ${budy} Selamat 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'family100', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete family100[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (siapakah.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = siapakah[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'siapakah', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete siapakah[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (susunkata.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = susunkata[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'susunkata', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete susunkata[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (tebakbendera.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = tebakbendera[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebakbendera', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete tebakbendera[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = tebakgambar[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebakgambar', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete tebakgambar[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (tebakkabupaten.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = tebakkabupaten[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebakkabupaten', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete tebakkabupaten[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = tebakkalimat[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebakkalimat', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete tebakkalimat[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = tebakkata[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebakkata', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete tebakkata[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (tebaklagu.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = tebaklagu[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebaklagu', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete tebaklagu[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (tekateki.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = tekateki[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tekateki', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete tekateki[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = tebaklirik[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebaklirik', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete tebaklirik[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-            if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
-                jawaban = tebaktebakan[m.sender.split('@')[0]]
-                if (budy.toLowerCase() == jawaban) {
-                    await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebaktebakan', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
-                    delete tebaktebakan[m.sender.split('@')[0]]
-                } else m.reply('*Jawaban Salah!*')
-            }
-        } catch (e) {
-            console.error(e)
-        }
+        // try {
+        //     if (asahotak.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = asahotak[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'asahotak', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete asahotak[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = caklontong[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'caklontong', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete caklontong[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (family100.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = family100[m.sender.split('@')[0]]
+        //         result = Array.from(jawaban).find((v) => v === budy)
+        //         if (budy.toLowerCase() == result) {
+        //             await killua.sendMessage(m.from, { text:`Benar Salah Satu Jawabanya Adalah ${budy} Selamat 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'family100', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete family100[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (siapakah.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = siapakah[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'siapakah', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete siapakah[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (susunkata.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = susunkata[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'susunkata', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete susunkata[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (tebakbendera.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = tebakbendera[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebakbendera', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete tebakbendera[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = tebakgambar[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebakgambar', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete tebakgambar[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (tebakkabupaten.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = tebakkabupaten[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebakkabupaten', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete tebakkabupaten[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = tebakkalimat[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebakkalimat', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete tebakkalimat[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = tebakkata[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebakkata', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete tebakkata[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (tebaklagu.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = tebaklagu[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebaklagu', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete tebaklagu[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (tekateki.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = tekateki[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tekateki', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete tekateki[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = tebaklirik[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebaklirik', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete tebaklirik[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        //     if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && !isCmd) {
+        //         jawaban = tebaktebakan[m.sender.split('@')[0]]
+        //         if (budy.toLowerCase() == jawaban) {
+        //             await killua.sendMessage(m.from, { text:`Selamat Jawaban ${budy} Benar 🎉\n\nIngin bermain lagi? Tekan Tombol Lanjut dibawah\n`, footer:'Entertainment\nPowered By https://zenzapis.xyz', buttons:[{ buttonId:'tebaktebakan', buttonText:{ displayText:'Lanjut'}, type:1 }], headerType:4 }, { quoted: m })
+        //             delete tebaktebakan[m.sender.split('@')[0]]
+        //         } else m.reply('*Jawaban Salah!*')
+        //     }
+        // } catch (e) {
+        //     console.error(e)
+        // }
 
         /* uncomment jika ingin menggunakan
         if (!isOffline && isCmd && !cmd) {
@@ -304,9 +304,9 @@ module.exports = async (killua, m, commands, chatUpdate) => {
             return m.reply(`${cmd.example.replace(/%prefix/gi, prefix).replace(/%command/gi, cmd.name).replace(/%text/gi, text)}`)
         }
 
-        if (cmd.isQuery && !text) {
-            return m.reply(`${cmd.example.replace(/%prefix/gi, prefix).replace(/%command/gi, cmd.name).replace(/%text/gi, text)}`)
-        }
+        // if (cmd.isQuery && !text) {
+        //     return m.reply(`${cmd.example.replace(/%prefix/gi, prefix).replace(/%command/gi, cmd.name).replace(/%text/gi, text)}`)
+        // }
 
         try {
 			if (cmd && !cmd.noLimit) {
