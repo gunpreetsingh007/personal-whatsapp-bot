@@ -309,11 +309,11 @@ module.exports = async (killua, m, commands, chatUpdate) => {
         // }
 
         try {
-			if (cmd && !cmd.noLimit) {
-                if (user.isLimit(m.sender, isPremium, isOwner, config.options.limitCount, _user) && !m.fromMe)
-				return m.reply(`Your limit has run out, please send ${prefix}limit to check the limit`);
-				user.limitAdd(m.sender, isPremium, isOwner, _user);
-			}
+			// if (cmd && !cmd.noLimit) {
+            //     if (user.isLimit(m.sender, isPremium, isOwner, config.options.limitCount, _user) && !m.fromMe)
+			// 	return m.reply(`Your limit has run out, please send ${prefix}limit to check the limit`);
+			// 	user.limitAdd(m.sender, isPremium, isOwner, _user);
+			// }
         if(isCmd){
 			cmd.start(killua, m, {
                 name: 'killua Zoldyck',

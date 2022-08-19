@@ -15,7 +15,7 @@ module.exports = {
             if (cmd.use) data.push(`*Use:* ${cmd.use}`);
             if (cmd.desc) data.push(`*Description :* ${cmd.desc}\n`)
             if (cmd.example) data.push(`*Example :* ${cmd.example.replace(/%prefix/gi, prefix).replace(/%command/gi, cmd.name).replace(/%text/gi, text)}`)
-            return m.reply(`*Info Command ${cmd.name.replace(/^\w/, c => c.toUpperCase())}*\n\n${data.join("\n")}`)
+            killua.sendMessage(m.from, {text: `*Info Command ${cmd.name.replace(/^\w/, c => c.toUpperCase())}*\n\n${data.join("\n")}`},  { quoted: m })
         } else {
             let teks = `Hello, ${pushName === undefined ? sender.split("@")[0] : pushName}\nHere is the Command List\n\n`
 
@@ -37,8 +37,7 @@ module.exports = {
                 image: { url: 'https://camo.githubusercontent.com/23f3195d91e7095ae37ef6a22475b9f1206f8334bc3e5ca61637f7d7e8cf962a/68747470733a2f2f692e70696e696d672e636f6d2f373336782f66662f38372f62372f66663837623730653963396465613464396361333263393533386138316333622e6a7067' },
                 caption: teks
             }
-
-            m.reply(teks, m.from, { quoted: m })
+            killua.sendMessage(m.from, {text: teks},  { quoted: m })
         }
     },
     noLimit: true,
