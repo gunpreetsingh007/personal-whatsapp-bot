@@ -102,17 +102,17 @@ module.exports = async (killua, m, commands, chatUpdate) => {
         }
 
         // DATABASE
-        try {
-            let chat = global.db.chats[m.from]
-            if (typeof chat !== "object") global.db.chats = {}
-            if (chat) {
-                if (!('antidelete' in chat)) chat.antidelete = true
-            } else global.db.chats[m.from] = {
-                antidelete: true
-            }
-        } catch(e) {
-            console.error(e)
-        }
+        // try {
+        //     let chat = global.db.chats[m.from]
+        //     if (typeof chat !== "object") global.db.chats = {}
+        //     if (chat) {
+        //         if (!('antidelete' in chat)) chat.antidelete = true
+        //     } else global.db.chats[m.from] = {
+        //         antidelete: true
+        //     }
+        // } catch(e) {
+        //     console.error(e)
+        // }
 
         setInterval(() => {
             fs.writeFileSync('./database/db.json', JSON.stringify(global.db, null, 2))
@@ -131,15 +131,15 @@ module.exports = async (killua, m, commands, chatUpdate) => {
         }
 
         // ANTI DELETE
-        if (isAntidelete && m.message && m.message.protocolMessage && m.message.protocolMessage.type == 0) {
-            if (!db.chats[m.from].antidelete) return
-            let key = m.message.protocolMessage.key
-            let msg = await killua.serializeM(await Store.loadMessage(key.remoteJid, key.id))
-            let teks = `「 Message Delete Detect 」\n\n⬡ Name : ${msg.pushName}\n⬡ User : @${msg.sender.split("@")[0]}\n⬡ Date : ${moment(msg.messageTimestamp * 1000).tz(config.timezone)}\n⬡ Type : ${msg.type}\n`
-            let tekss = teks.replace("GMT+0700", "")
-            killua.relayMessage(m.from, msg.message, { messageId: msg.id })
-            await killua.sendText(m.from, tekss, msg, { mentions: [msg.sender] })
-        }
+        // if (isAntidelete && m.message && m.message.protocolMessage && m.message.protocolMessage.type == 0) {
+        //     if (!db.chats[m.from].antidelete) return
+        //     let key = m.message.protocolMessage.key
+        //     let msg = await killua.serializeM(await Store.loadMessage(key.remoteJid, key.id))
+        //     let teks = `「 Message Delete Detect 」\n\n⬡ Name : ${msg.pushName}\n⬡ User : @${msg.sender.split("@")[0]}\n⬡ Date : ${moment(msg.messageTimestamp * 1000).tz(config.timezone)}\n⬡ Type : ${msg.type}\n`
+        //     let tekss = teks.replace("GMT+0700", "")
+        //     killua.relayMessage(m.from, msg.message, { messageId: msg.id })
+        //     await killua.sendText(m.from, tekss, msg, { mentions: [msg.sender] })
+        // }
         
         // ENTERTAINMENT
         // try {
