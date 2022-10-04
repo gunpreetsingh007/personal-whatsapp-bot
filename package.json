@@ -4,6 +4,10 @@
   "description": "WhatsApp Bot Using Lib Baileys",
   "main": "index.js",
   "type": "commonjs",
+  "engines": {
+    "node": "~14.17.3",
+    "npm": "~6.14.13"
+  },
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
     "@adiwajshing/keyed-db": "^0.2.4",
