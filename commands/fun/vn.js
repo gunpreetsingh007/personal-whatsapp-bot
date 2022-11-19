@@ -86,7 +86,7 @@ module.exports = {
                 if(args[0] && allLang.includes(args[0])){
                     let lang = args[0]
                     args.shift()
-                    const audioBase64 = await googleTTS.getAudioBase64((args.length != 0) ? args.join(" ") : "Fudidiya bolna kya hai chutiye ki tu kitna bada fudu hai?" , {
+                    const audioBase64 = await googleTTS.getAudioBase64((args.length != 0) ? args.join(" ") : "Fudidiya message tere pape nai likhna chutiya?" , {
                         lang: lang,
                         slow: false,
                         host: 'https://translate.google.com',
@@ -95,7 +95,7 @@ module.exports = {
                     killua.sendFile(m.from, "audio.mp3", "", m)
                 }
                else{
-                const audioBase64 = await googleTTS.getAudioBase64((args.length != 0) ? args.join(" ") : "Fudidiya bolna kya hai chutiye ki tu kitna bada fudu hai?" , {
+                const audioBase64 = await googleTTS.getAudioBase64((args.length != 0) ? args.join(" ") : "Fudidiya message tere pape nai likhna chutiya?" , {
                     lang: 'ja',
                     slow: false,
                     host: 'https://translate.google.com',
