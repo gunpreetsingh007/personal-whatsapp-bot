@@ -1,6 +1,7 @@
 require("./global")
 const { default: WASocket, DisconnectReason, useSingleFileAuthState, fetchLatestBaileysVersion, delay, jidNormalizedUser, makeWALegacySocket, useSingleFileLegacyAuthState, DEFAULT_CONNECTION_CONFIG, DEFAULT_LEGACY_CONNECTION_CONFIG } = require("@adiwajshing/baileys")
 const fs = require("fs")
+const keepAlive = require("./server")
 const chalk = require("chalk")
 const pino = require("pino")
 const yargs = require("yargs")
@@ -106,3 +107,4 @@ const connect = async () => {
 }
 
 connect()
+keepAlive()
