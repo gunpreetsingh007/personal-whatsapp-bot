@@ -10,7 +10,7 @@ const server = http.createServer((req,res) => {
 });
 
 function keepAlive() {
-  server.listen(port, hostname, () => {
+  server.listen(port, () => {
     console.log('Server running')
   });
 }
