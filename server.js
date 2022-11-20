@@ -1,13 +1,18 @@
-const express = require("express")
+const http = require("http")
 
-const server = express()
-server.all("/", (req, res) => {
-  res.send("Bot is running!")
-})
+const hostname = '0.0.0.0';
+const port = 10000
+
+const server = http.createServer((req,res) => {
+     res.statusCode = 200;
+     res.setHeader('Content-Type', 'text/plain');
+     res.end('Bot is running')
+});
 
 function keepAlive() {
-  server.listen(3000, () => {
-  })
+  server.listen(port, hostname, () => {
+    console.log('Server running')
+  });
 }
 
 module.exports = keepAlive
