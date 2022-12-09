@@ -119,16 +119,16 @@ module.exports = async (killua, m, commands, chatUpdate) => {
         }, 15 * 1000)
 
         // ANTILINK
-        if (isGroup && isBotAdmin && isAntilink && !isAdmin && !isOwner) {
-            if (budy.match("://chat.whatsapp.com/")) {
-                setTimeout( () => {
-                    killua.groupParticipantsUpdate(from, [sender], "remove")
-                }, 5 * 1000)
-                setTimeout( () => {
-                    m.reply('*⭔ Link Group Detected!*\n_Sorry you will be kicked from this group!_')
-                }, 0)
-            }
-        }
+        // if (isGroup && isBotAdmin && isAntilink && !isAdmin && !isOwner) {
+        //     if (budy.match("://chat.whatsapp.com/")) {
+        //         setTimeout( () => {
+        //             killua.groupParticipantsUpdate(from, [sender], "remove")
+        //         }, 5 * 1000)
+        //         setTimeout( () => {
+        //             m.reply('*⭔ Link Group Detected!*\n_Sorry you will be kicked from this group!_')
+        //         }, 0)
+        //     }
+        // }
 
         // ANTI DELETE
         // if (isAntidelete && m.message && m.message.protocolMessage && m.message.protocolMessage.type == 0) {
