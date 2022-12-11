@@ -87,7 +87,7 @@ module.exports = {
 	start: async (killua, m, { command, prefix, quoted, mime, args, body, isGroup }) => {
         try{
             if(!isGroup){
-              m.reply("This game is supposed to be played in a group you dumbfuck")
+              m.reply("This game is supposed to be played in a group")
               return
             }
 
@@ -101,14 +101,14 @@ module.exports = {
                          m.reply("Wordgame session has started. Reply with #wordgame join to join the game")
                       }
                       else{
-                        m.reply("Session has already started you dumbass")
+                        m.reply("Session has already started")
                       }
                       break;
                     case "join":
                       if(wordgameJSON[m.from]){
                             let obj = wordgameJSON[m.from] 
                             if(obj.users.includes(m.sender)){
-                                m.reply("How many times you want to join? I wish you had joined this world with brain also.")
+                                m.reply("How many times you want to join?")
                                 return
                             }
                             obj.users.push(m.sender)
@@ -124,7 +124,7 @@ module.exports = {
                        if(wordgameJSON[m.from]){
                               let obj = wordgameJSON[m.from] 
                               if(!obj.users.includes(m.sender)){
-                                  m.reply("You are not added dumbass. First add yourself, then maybe I will throw you out myself.")
+                                  m.reply("You are not added. First add yourself, then maybe I will throw you out myself.")
                                   return
                               }
                               const index = obj.users.indexOf(m.sender);
@@ -133,10 +133,10 @@ module.exports = {
                               }
                               wordgameJSON[m.from] = obj
                               fs.writeFileSync("database/wordgame.json", JSON.stringify(wordgameJSON, null, 4))
-                              m.reply("You have successfully left the session. Bye. No one gonna miss you anyway")
+                              m.reply("You have successfully left the session.")
                           }
                        else{
-                            m.reply("What are you trying to leave? Please leave this world so we have one less idiot to worry about.")
+                            m.reply("What are you trying to leave? Please leave this world and go to mars so we have one less idiot to worry about.")
                        }
                       break;
                     case "forcestart":
@@ -167,7 +167,7 @@ module.exports = {
                             m.reply("Wordgame Session has been stopped")
                         }
                         else{
-                            m.reply("Stop your life. It has no meaning anyway.")
+                            m.reply("What are you trying to stop?")
                         }
                       break;
                     default:
@@ -180,15 +180,15 @@ module.exports = {
                 if(m.sender != obj.users[0])
                 return
                 if(body.length < obj.wordLength){
-                    m.reply(`Minimum ${obj.wordLength} words are required. Faggot`)
+                    m.reply(`Minimum ${obj.wordLength} words are required.`)
                     return
                 }
                 if(!body.toLowerCase().startsWith(obj.startingWord.toLowerCase())){
-                    m.reply(`You need to start the word with ${obj.startingWord}. Are you dumb or what?`)
+                    m.reply(`You need to start the word with ${obj.startingWord}.`)
                     return
                 }
                 if(usedWords.includes(body.toLowerCase())){
-                    m.reply("This word has been already used just as you.")
+                    m.reply("This word has been already used.")
                     return
                 }
                 if(allWords.includes(body.toLowerCase()) ){

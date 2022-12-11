@@ -11,7 +11,7 @@ function rotateLeft(arr){
     return arr;
 }
 
-let ratings = ["pg","pg13","r"]
+let ratings = ["pg","pg13"]
 
 let links = ["https://api.truthordarebot.xyz/v1/truth", "https://api.truthordarebot.xyz/api/wyr", "https://api.truthordarebot.xyz/api/nhie", "https://api.truthordarebot.xyz/api/paranoia"]
 
@@ -25,7 +25,7 @@ module.exports = {
 	start: async (killua, m, { command, prefix, quoted, mime, args, body, isGroup }) => {
         try{
             if(!isGroup){
-              m.reply("This game is supposed to be played in a group you dumbfuck")
+              m.reply("This game is supposed to be played in a group.")
               return
             }
 
@@ -46,7 +46,7 @@ module.exports = {
                       if(todJSON[m.from]){
                             let obj = todJSON[m.from] 
                             if(obj.users.includes(m.sender)){
-                                m.reply("How many times you want to join? I wish you had joined this world with brain also.")
+                                m.reply("How many times you want to join?")
                                 return
                             }
                             obj.users.push(m.sender)
@@ -55,14 +55,14 @@ module.exports = {
                             m.reply("You have joined the session.")
                         }
                       else{
-                        m.reply("What are you trying to join? Squad of idiots? First create a session.")
+                        m.reply("What are you trying to join?.")
                       }
                       break;
                     case "leave":
                        if(todJSON[m.from]){
                               let obj = todJSON[m.from] 
                               if(!obj.users.includes(m.sender)){
-                                  m.reply("You are not added dumbass. First add yourself, then maybe I will throw you out myself.")
+                                  m.reply("You are not added. First add yourself, then maybe I will throw you out myself.")
                                   return
                               }
                               const index = obj.users.indexOf(m.sender);
@@ -71,10 +71,10 @@ module.exports = {
                               }
                               todJSON[m.from] = obj
                               fs.writeFileSync("database/tod.json", JSON.stringify(todJSON, null, 4))
-                              m.reply("You have successfully left the session. Bye. No one gonna miss you anyway")
+                              m.reply("You have successfully left the session.")
                           }
                        else{
-                            m.reply("What are you trying to leave? Please leave this world so we have one less idiot to worry about.")
+                            m.reply("What are you trying to leave?")
                        }
                       break;
                     case "next":
@@ -107,7 +107,7 @@ module.exports = {
                             m.reply("Truth or Dare Session has been stopped")
                         }
                         else{
-                            m.reply("Stop your life. It has no meaning anyway.")
+                            m.reply("Nothing to stop. LOL")
                         }
                       break;
                     default:
